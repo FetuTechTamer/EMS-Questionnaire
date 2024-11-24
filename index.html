@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="eventfavicon.ico">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <!-- Cover Page -->
+    <div class="cover-page" id="cover">
+        <h1>Welcome to the Event Management System Questionnaire</h1>
+        <p>This questionnaire aims to gather insights about your experiences and expectations regarding event management systems. Your feedback is invaluable for improving our services.</p>
+        <p>Please click the button below to start filling out the questionnaire.</p>
+        <button id="start-button">Fill Questionnaire</button>
+    </div>
+
+    <!-- Form Page -->
+    <div class="form-page" id="form">
+        <h1>Event Management System Questionnaire</h1>
+        
+        <form name="submit-to-google-sheet">
+            <fieldset>
+                <legend>Stakeholder Information</legend>
+                <div class="question">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Demographic Information</legend>
+                <div class="question">
+                    <p>1. What is your role in event management?</p>
+                    <div class="options">
+                        <label for="role-organizer">
+                            <input type="radio" name="role" id="role-organizer" value="Event Organizer" required> Event Organizer
+                        </label>
+                        <label for="role-attendee">
+                            <input type="radio" name="role" id="role-attendee" value="Attendee"> Attendee
+                        </label>
+                        <label for="role-vendor">
+                            <input type="radio" name="role" id="role-vendor" value="Vendor"> Vendor
+                        </label>
+                        <label for="role-admin">
+                            <input type="radio" name="role" id="role-admin" value="Administrative Staff"> Administrative Staff
+                        </label>
+                        <label for="role-it">
+                            <input type="radio" name="role" id="role-it" value="IT Personnel"> IT Personnel
+                        </label>
+                        <label for="role-other">
+                            <input type="radio" name="role" id="role-other" value="Other"> Other (please specify): 
+                            <input type="text" id="other-role" placeholder="Specify">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>2. How many events do you participate in or organize per year?</p>
+                    <div class="options">
+                        <label for="events-1-5">
+                            <input type="radio" name="events_per_year" id="events-1-5" value="1-5" required> 1-5
+                        </label>
+                        <label for="events-6-10">
+                            <input type="radio" name="events_per_year" id="events-6-10" value="6-10"> 6-10
+                        </label>
+                        <label for="events-11-20">
+                            <input type="radio" name="events_per_year" id="events-11-20" value="11-20"> 11-20
+                        </label>
+                        <label for="events-more-than-20">
+                            <input type="radio" name="events_per_year" id="events-more-than-20" value="More than 20"> More than 20
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Current System Evaluation</legend>
+                <div class="question">
+                    <p>3. How satisfied are you with the current event management system? (1 = Very Dissatisfied, 5 = Very Satisfied)</p>
+                    <div class="options">
+                        <label for="satisfaction-1">
+                            <input type="radio" name="satisfaction" id="satisfaction-1" value="1" required> 1
+                        </label>
+                        <label for="satisfaction-2">
+                            <input type="radio" name="satisfaction" id="satisfaction-2" value="2"> 2
+                        </label>
+                        <label for="satisfaction-3">
+                            <input type="radio" name="satisfaction" id="satisfaction-3" value="3"> 3
+                        </label>
+                        <label for="satisfaction-4">
+                            <input type="radio" name="satisfaction" id="satisfaction-4" value="4"> 4
+                        </label>
+                        <label for="satisfaction-5">
+                            <input type="radio" name="satisfaction" id="satisfaction-5" value="5"> 5
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>4. What challenges do you face with the current system? (Select all that apply)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="challenges" id="challenge-slow" value="Slow performance"> Slow performance</label>
+                        <label><input type="checkbox" name="challenges" id="challenge-ui" value="User interface issues"> User interface issues</label>
+                        <label><input type="checkbox" name="challenges" id="challenge-registration" value="Difficulty in registration"> Difficulty in registration</label>
+                        <label><input type="checkbox" name="challenges" id="challenge-reporting" value="Limited reporting capabilities"> Limited reporting capabilities</label>
+                        <label for="challenge-other">
+                            <input type="checkbox" name="challenges" id="challenge-other" value="Other"> Other (please specify): 
+                            <input type="text" id="other-challenge" placeholder="Specify">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Desired Features and Functionalities</legend>
+                <div class="question">
+                    <p>5. Which features do you consider essential for the new EMS? (Select all that apply)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="features" id="feature-templates" value="Event creation templates"> Event creation templates</label>
+                        <label><input type="checkbox" name="features" id="feature-ticketing" value="Advanced ticketing options"> Advanced ticketing options</label>
+                        <label><input type="checkbox" name="features" id="feature-automation" value="Automated communication"> Automated communication (confirmation emails, reminders)</label>
+                        <label><input type="checkbox" name="features" id="feature-reporting" value="Real-time reporting"> Real-time reporting and analytics</label>
+                        <label><input type="checkbox" name="features" id="feature-mobile" value="Mobile access"> Mobile access for attendees</label>
+                        <label><input type="checkbox" name="features" id="feature-vendor" value="Vendor management"> Vendor management tools</label>
+                        <label for="feature-other">
+                            <input type="checkbox" name="features" id="feature-other" value="Other"> Other (please specify): 
+                            <input type="text" id="other-feature" placeholder="Specify">
+                        </label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>6. Which integrations or compatibility features are important for your EMS? (Select all that apply)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="integrations" id="integration-crm" value="CRM integration"> Integration with CRM systems</label>
+                        <label><input type="checkbox" name="integrations" id="integration-payment" value="Payment gateway"> Payment gateway integration</label>
+                        <label><input type="checkbox" name="integrations" id="integration-social" value="Social media"> Social media integration</label>
+                        <label><input type="checkbox" name="integrations" id="integration-analytics" value="Analytics tools"> Integration with analytics tools</label>
+                        <label><input type="checkbox" name="integrations" id="integration-email" value="Email marketing"> Email marketing platform integration</label>
+                        <label><input type="checkbox" name="integrations" id="integration-api" value="Open API"> Open API for custom integrations</label>
+                        <label for="integration-other">
+                            <input type="checkbox" name="integrations" id="integration-other" value="Other"> Other (please specify): 
+                            <input type="text" id="other-integration" placeholder="Specify">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Usability and Accessibility</legend>
+                <div class="question">
+                    <p>7. How important is mobile access for event registration and information? (1 = Not Important, 5 = Very Important)</p>
+                    <div class="options">
+                        <label for="mobile-access-1">
+                            <input type="radio" name="mobile_access" id="mobile-access-1" value="1" required> 1
+                        </label>
+                        <label for="mobile-access-2">
+                            <input type="radio" name="mobile_access" id="mobile-access-2" value="2"> 2
+                        </label>
+                        <label for="mobile-access-3">
+                            <input type="radio" name="mobile_access" id="mobile-access-3" value="3"> 3
+                        </label>
+                        <label for="mobile-access-4">
+                            <input type="radio" name="mobile_access" id="mobile-access-4" value="4"> 4
+                        </label>
+                        <label for="mobile-access-5">
+                            <input type="radio" name="mobile_access" id="mobile-access-5" value="5"> 5
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>8. What issues do you encounter with the registration process? (Open-ended)</p>
+                    <textarea class="open-ended" name="registration_issues" rows="4" placeholder="Your answer..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Communication and Coordination</legend>
+                <div class="question">
+                    <p>9. How do you currently communicate with event participants and vendors? (Select all that apply)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="communication" id="communication-email" value="Email"> Email</label>
+                        <label><input type="checkbox" name="communication" id="communication-phone" value="Phone"> Phone</label>
+                        <label><input type="checkbox" name="communication" id="communication-messaging" value="Messaging apps"> Messaging apps</label>
+                        <label for="communication-other">
+                            <input type="checkbox" name="communication" id="communication-other" value="Other"> Other (please specify): 
+                            <input type="text" id="other-communication" placeholder="Specify">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. What improvements would you suggest for communication within the EMS? (Open-ended)</p>
+                    <textarea class="open-ended" name="communication_issues" rows="4" placeholder="Your answer..."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="submit-button">
+                <button type="submit">Submit Questionnaire</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+        <span id="msg"></span>
+    </div>
+</div>
+
+
+</body>
+</html>
